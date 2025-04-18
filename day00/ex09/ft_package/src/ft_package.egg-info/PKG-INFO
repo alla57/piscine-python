@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: ft_package
+Version: 0.0.1
+Summary: A sample test package
+Author-email: Your Name <eagle@42.fr>
+License: MIT
+Project-URL: Home-page, https://github.com/eagle/ft_package
+Description-Content-Type: text/markdown
+
+# ft_package
+
+This is my first Python package!
+
+## Features
+
+- `greet(name)` - returns a greeting for the given name.
+- `add(a, b)` - returns the sum of two numbers.
