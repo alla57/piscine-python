@@ -1,11 +1,12 @@
-from tqdm import tqdm
 import sys
+
 
 def ft_tqdm(lst: range) -> None:
     """Custom implementation of a progress bar generator, similar to tqdm.
 
-    This function wraps over a given iterable (typically a range object) and 
-    yields its items one by one while displaying a dynamic progress bar in the terminal.
+    This function wraps over a given iterable (typically a range object) and
+    yields its items one by one while displaying a
+    dynamic progress bar in the terminal.
 
     Parameters:
     -----------

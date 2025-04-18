@@ -1,8 +1,10 @@
 import sys
 import string
 
+
 def main():
-    """ Count the number characters, upper case, lower case, punctuation, digits and spaces of the string give in argument to the program.
+    """ Count the number characters, upper case, lower case, punctuation,
+    digits and spaces of the string give in argument to the program.
     Please provide only one string """
     try:
         if len(sys.argv) < 2 or sys.argv[1] is None:
@@ -35,13 +37,14 @@ def main():
         print(nOfPunctuation, "punctuation marks")
         print(nOfSpace, "spaces")
         print(nOfDigits, "digits")
-    
+
     except AssertionError as e:
         print(AssertionError.__name__ + ":", e)
         sys.exit(1)
     except Exception as e:
         print(e)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,4 @@
-def count_in_list(list, item) -> int :
+def count_in_list(lst, item) -> int:
     """Count the number of occurrences of an item in a list.
 
     Parameters:
