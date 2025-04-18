@@ -1,5 +1,6 @@
-def give_bmi(height: list[int | float], \
-weight: list[int | float]) -> list[int | float]:
+def give_bmi(
+        height: list[int | float], weight: list[int | float]
+        ) -> list[int | float]:
     """
     Calculates the Body Mass Index (BMI) for each pair of height and weight.
 
@@ -30,7 +31,6 @@ weight: list[int | float]) -> list[int | float]:
             raise AssertionError("One of your list is a None.")
         if len(height) != len(weight):
             raise AssertionError("Height and weight must be the same length.")
-
 
         bmi = []
         for h, w in zip(height, weight):
