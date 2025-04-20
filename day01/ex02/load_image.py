@@ -21,20 +21,23 @@ def ft_load(path: str) -> np.ndarray | None:
         path (str): The file path to the JPEG image file.
 
     Returns:
-        np.ndarray: A NumPy array containing the image pixel data (typically RGB).
-                    This return only occurs if the image is loaded successfully.
-                    The function will exit otherwise.
+        np.ndarray: A NumPy array containing the image pixel data
+        (typically RGB).
+                This return only occurs if the image is loaded successfully.
+                The function will exit otherwise.
 
     Prints:
-        - "The shape of image is: (height, width, channels)" to stdout on success.
+        - "The shape of image is: (height, width, channels)"
+        to stdout on success.
         - Error messages to stderr on failure before exiting.
 
     Raises:
         SystemExit: The function calls sys.exit(1) upon any detected error,
                     effectively raising SystemExit after printing to stderr.
-                    Specific errors caught include: AssertionError (for path type
-                    or image format), FileNotFoundError, IsADirectoryError,
-                    PermissionError, and other general Exceptions during loading.
+                    Specific errors caught include: AssertionError (for path
+                    type or image format), FileNotFoundError,
+                    IsADirectoryError,PermissionError, and other general
+                    Exceptions during loading.
     """
     try:
         if not isinstance(path, str):
