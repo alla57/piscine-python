@@ -5,13 +5,18 @@ import sys
 
 
 def main():
+    """
+    Main function to load data, filter for the campus country,
+    and plot life expectancy.
+    """
     try:
         file_path = "life_expectancy_years.csv"
         data = load(file_path)
         if data is None:
             raise AssertionError("Failed to load data")
         if not isinstance(data, pd.DataFrame):
-            raise AssertionError("Loaded data is not in the expected format (DataFrame)")
+            raise AssertionError("Loaded data is not in the \
+                                 expected format (DataFrame)")
 
         campus_country = "France"
         data.set_index('country', inplace=True)
@@ -28,6 +33,7 @@ def main():
     except Exception as e:
         print(f"{type(e).__name__}: {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
