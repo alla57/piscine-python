@@ -13,23 +13,20 @@ def main():
     Not respecting these rules could lead to unexpected behavior.
     """
     try:
-        if len(sys.argv) != 3:
-            raise AssertionError("the arguments are bad")
+        if len(sys.argv) != 3 or not isinstance(sys.argv[1], str):
+            raise AssertionError()
 
         s = sys.argv[1].split()
         n = int(sys.argv[2])
 
-        if not isinstance(s, str) or not isinstance(n, int):
-            raise AssertionError("the arguments are bad")
+        if not isinstance(n, int):
+            raise AssertionError()
 
         it = ft_filter(lambda x: len(x) > n, s)
         print(list(it))
 
-    except AssertionError as e:
-        print(AssertionError.__name__ + ":", e)
-        sys.exit(1)
-    except Exception as e:
-        print(e)
+    except Exception:
+        print("AssertionError: the arguments are bad")
         sys.exit(1)
 
 
